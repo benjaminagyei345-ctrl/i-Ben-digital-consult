@@ -1,49 +1,32 @@
-:root{
-  --bg:#0a1524; --panel:#0f1f33; --ink:#dfe7f5; --muted:#9fb3ce;
-  --accent:#6de1ff; --ring:#24435f;
-  --radius:18px;
-}
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#061324,#0b1a2d 40%,#0a1423);color:var(--ink)}
-a{color:inherit;text-decoration:none}
-.nav{position:sticky;top:0;z-index:20;background:#0d1a2b99;backdrop-filter: blur(6px);display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid #0d223d}
-.brand{display:flex;gap:10px;align-items:center}
-.logo{background:#0ec3ff;color:#00131f;font-weight:800;padding:10px 14px;border-radius:14px}
-.name{font-weight:700}
-.btn{display:inline-block;padding:14px 18px;border-radius:16px;background:linear-gradient(180deg,#4dd1ff,#63e2ff);color:#00131f;font-weight:700;text-align:center;box-shadow:0 8px 24px #0b2c3f70;border:1px solid #4ec7f6}
-.btn.ghost{background:transparent;border-color:#2f4460;color:var(--ink)}
-.btn.whats{background:#25D366;color:#001;box-shadow:none}
-.btn.sms{background:#3b82f6;color:#fff;box-shadow:none}
-.section{padding:28px 16px;max-width:1100px;margin:auto}
-.hero{padding:36px 16px 8px}
-.hero-inner{max-width:1100px;margin:auto}
-h1{font-size:36px;line-height:1.15;margin:8px 0 14px}
-h2{font-size:26px;margin:10px 0 16px}
-h3{margin:6px 0 8px}
-.muted{color:var(--muted)} .small{font-size:12px}
-.pill{display:inline-block;border:1px solid #2b4869;padding:8px 14px;border-radius:999px;margin-right:8px;color:#b9d2ec}
-.grid{display:grid;gap:16px}
-@media(min-width:720px){.grid{grid-template-columns:repeat(2,1fr)}}
-.card{background:radial-gradient(120% 120% at 10% 10%,#11243a 0%,#0e2035 60%,#0c1c2f 100%);border-radius:var(--radius);border:1px solid #183351;padding:16px;box-shadow:0 10px 30px #051226aa}
-.badge{display:inline-block;color:#74b9ff;border:1px solid #2c5076;background:#0e2136;padding:8px 14px;border-radius:999px;margin-bottom:10px}
-.price{font-size:36px;font-weight:800;margin:4px 0}
-.row{display:flex;gap:12px;flex-wrap:wrap}
-.field{min-width:180px;flex:1}
-label{display:block;font-size:12px;color:#9fb3ce;margin-bottom:6px}
-input,select{width:100%;background:#0e2037;border:1px solid #2b476b;color:var(--ink);padding:12px 14px;border-radius:12px;outline:none}
-.actions{margin-top:8px}
-.form{border:1px dashed #223c5a}
-.foot{padding:24px 16px;color:#96aecd;text-align:center;border-top:1px solid #183351;background:#0d1a2b}
-/* Modal */
-.modal{position:fixed;inset:0;background:#0007;display:none;align-items:center;justify-content:center;padding:16px}
-.modal.open{display:flex}
-.modal-card{background:#0f2136;border:1px solid #1e3a5b;border-radius:20px;max-width:800px;width:100%;padding:16px}
-.modal-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
-.modal-hd .close{border:none;background:#0e1f33;color:#9fb3ce;font-size:22px;border-radius:12px;padding:6px 10px}
-/* Button color overrides */
-.buy-mtn{background:#ffcc00;color:#000 !important}
-.buy-tigo{background:#0077cc;color:#fff !important}
-.buy-telecel{background:#cc0000;color:#fff !important}
-.buy-netflix{background:#e50914;color:#fff !important}
-.buy-audiomack{background:#ff9900;color:#fff !important}
-.btn:hover{filter:brightness(1.06)}
+*{box-sizing:border-box}html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#071422;color:#dbe7ff}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;background:#0a1a2a;position:sticky;top:0;z-index:10;border-bottom:1px solid rgba(255,255,255,.06)}
+.brand{display:flex;gap:10px;align-items:center;font-weight:800}
+.pill{background:#0ec2ff;color:#052035;padding:6px 10px;border-radius:12px}
+.cta{background:#12d1ff;color:#052035;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:800}
+.hero{padding:42px 18px 10px;background:linear-gradient(180deg,#0e233a,transparent)}
+.hero h1{font-size:32px;line-height:1.1;margin:0 0 8px}
+.container{padding:8px 18px 52px;max-width:980px;margin:0 auto}
+.section-title{font-size:22px;margin:22px 0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.svc{background:#0b1726;border:1px solid rgba(255,255,255,.06);border-radius:18px;padding:14px}
+.svc img{width:100%;height:160px;object-fit:cover;border-radius:12px;margin-bottom:10px}
+.action-row{margin-top:10px}
+.btn{border:none;border-radius:14px;padding:12px 16px;font-weight:800}
+.btn-whatsapp{background:#25d366;color:#052035}
+.btn-sms{background:#3b82f6;color:#fff}
+.btn-mtn{background:#ffd000;color:#111}
+.btn-at{background:#0072ff;color:#fff}
+.btn-tel{background:#ff2a2a;color:#fff}
+.btn-netflix{background:#e50914;color:#fff}
+.btn-audio{background:#ffb703;color:#052035}
+.foot{padding:32px 18px;text-align:center;border-top:1px solid rgba(255,255,255,.06);background:#0a1a2a;margin-top:18px}
+
+/* Dropdown cards */
+.ddl-wrap{display:grid;gap:16px}
+.ddl-card{background:#0c1b2a;border-radius:18px;padding:16px;border:1px solid rgba(255,255,255,0.06)}
+.ddl-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.ddl-badge{padding:6px 12px;border-radius:999px;font-weight:700;border:1px solid rgba(255,255,255,0.12)}
+.ddl-row{display:grid;grid-template-columns:1fr 160px;gap:12px}
+.ddl-row select{width:100%;background:#0b1522;border:1px solid rgba(255,255,255,0.12);color:#dbe7ff;border-radius:12px;padding:12px}
+.btn-net{border:none;border-radius:14px;padding:12px 16px;font-weight:800}
+@media (max-width:520px){.ddl-row{grid-template-columns:1fr}}
