@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>i‑Ben Digital Consult | Affordable Non‑Expiring Data & Digital Services</title>
+  <meta name="description" content="Instant, affordable, non‑expiring data bundles for MTN, AirtelTigo & Telecel. Order via WhatsApp or SMS. Fast delivery and friendly support from i‑Ben Digital Consult." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1020; --panel:#0f1730; --brand:#22d3ee; --brand2:#5ac8fa;
+      --text:#e8eefc; --muted:#a9b3d3; --ok:#10b981; --shadow:rgba(34,211,238,.2);
+    }
+    *{box-sizing:border-box} html,body{margin:0;height:100%;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);
+      background:radial-gradient(1200px 700px at 80% -10%, rgba(34,211,238,.18), transparent 60%), linear-gradient(180deg, #0b1020 0%, #0b1020 40%, #0f1730 100%);
+    }
+    a{color:var(--brand)}
+    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(140%) blur(10px);
+      background:linear-gradient(to bottom, rgba(15,23,48,.85), rgba(15,23,48,.55)); border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{max-width:1120px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:14px 16px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
+    .logo-badge{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#001322;font-weight:900}
+    nav{margin-left:auto;display:none;gap:18px}
+    nav a{font-weight:600;text-decoration:none;color:var(--text);opacity:.9}
+    .btn{appearance:none;border:0;border-radius:12px;padding:10px 16px;font-weight:700;cursor:pointer;
+      background:linear-gradient(135deg,var(--brand),var(--brand2));color:#001322;box-shadow:0 8px 24px -6px var(--shadow);}
+    .btn.alt{background:#1f2937;color:#e5e7eb}
+    .btn:hover{filter:brightness(1.05)}
+    @media (min-width:880px){ nav{display:flex} }
+    .hero{max-width:1120px;margin:0 auto;padding:56px 16px 28px;display:grid;gap:22px}
+    .hero h1{font-size:clamp(28px,6vw,48px);letter-spacing:.2px;margin:0}
+    .hero p{font-size:clamp(15px,2.2vw,18px);color:var(--muted);margin:0}
+    .hero-cards{display:grid;grid-template-columns:1fr;gap:16px;margin-top:10px}
+    @media (min-width:780px){.hero{grid-template-columns:1.3fr .7fr;align-items:center}.hero-cards{grid-template-columns:repeat(3,1fr)}}
+    .kpi{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:18px}
+    .kpi h3{margin:0 0 6px;font-size:16px;opacity:.9}
+    .kpi p{margin:0;color:var(--muted);font-size:14px}
+    .section{max-width:1120px;margin:28px auto;padding:12px 16px}
+    .section h2{margin:0 0 14px;font-size:28px}
+    .grid{display:grid;grid-template-columns:1fr;gap:14px}
+    @media (min-width:820px){.grid{grid-template-columns:repeat(3,1fr)}}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:10px}
+    .badge{display:inline-block;background:rgba(34,211,238,.12);border:1px solid rgba(34,211,238,.35);color:var(--brand);padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.3px}
+    .price{font-size:26px;font-weight:800}
+    .muted{color:var(--muted)}
+    details{background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:14px}
+    summary{cursor:pointer;font-weight:700}
+    footer{margin-top:44px;border-top:1px solid rgba(255,255,255,.08)}
+    .footer-inner{max-width:1120px;margin:0 auto;padding:22px 16px;display:grid;gap:8px;color:var(--muted)}
+    .modal{position:fixed;inset:0;display:none;place-items:center;background:rgba(0,6,16,.6);backdrop-filter:blur(6px)}
+    .modal.open{display:grid}
+    .modal-card{width:min(520px,92vw);background:#0e1530;border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:18px}
+    .modal-card h3{margin:0 0 8px}
+    .row{display:grid;gap:10px;margin:8px 0}
+    @media (min-width:560px){.row{grid-template-columns:1fr 1fr}}
+    label{font-size:14px;color:var(--muted)}
+    input,select{width:100%;background:#0a1228;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:10px 12px;color:var(--text);outline:none}
+    input:focus,select:focus{border-color:var(--brand);box-shadow:0 0 0 6px rgba(34,211,238,.12)}
+    .note{font-size:12px;color:var(--muted)}
+    .wa{position:fixed;right:16px;bottom:16px;display:flex;gap:10px;align-items:center;background:#10b981;border:0;color:white;padding:12px 14px;border-radius:999px;font-weight:800;box-shadow:0 10px 30px -10px rgba(16,185,129,.6);text-decoration:none;z-index:60}
+    .sms{position:fixed;right:16px;bottom:74px;display:flex;gap:10px;align-items:center;background:#2563eb;border:0;color:white;padding:12px 14px;border-radius:999px;font-weight:800;box-shadow:0 10px 30px -10px rgba(37,99,235,.6);text-decoration:none;z-index:60}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo" aria-label="i‑Ben Digital Consult">
+        <div class="logo-badge">i‑B</div>
+        <div class="brand">i‑Ben Digital Consult</div>
+      </div>
+      <nav>
+        <a href="#plans">Plans</a>
+        <a href="#features">Features</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="btn" onclick="openModal()">Buy Data</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Affordable, reliable & non‑expiring data bundles.</h1>
+      <p>Instant delivery for MTN, AirtelTigo & Telecel. Order via <strong>WhatsApp or SMS</strong>. Simple, fast and friendly service from <strong>i‑Ben Digital Consult</strong>.</p>
+      <div class="hero-cards">
+        <div class="kpi"><h3>All Networks</h3><p>MTN • AirtelTigo • Telecel</p></div>
+        <div class="kpi"><h3>Non‑Expiring Data</h3><p>Use your bundles anytime—no expiry.</p></div>
+        <div class="kpi"><h3>Instant Delivery</h3><p>24/7 fulfillment after payment confirmation.</p></div>
+      </div>
+    </div>
+    <div>
+      <div class="kpi">
+        <h3>Quick Purchase</h3>
+        <p class="muted">Choose network & plan, then message us to complete your order.</p>
+        <div class="row">
+          <label>Network
+            <select id="qNetwork">
+              <option value="MTN">MTN</option>
+              <option value="AirtelTigo">AirtelTigo</option>
+              <option value="Telecel">Telecel</option>
+            </select>
+          </label>
+          <label>Plan
+            <select id="qPlan"></select>
+          </label>
+        </div>
+        <label>Phone Number
+          <input id="qPhone" inputmode="numeric" maxlength="10" placeholder="0551234567" />
+        </label>
+        <p class="note">Enter a valid 10‑digit Ghana number (e.g., 055…)</p>
+        <p class="note">No WhatsApp? You can use SMS at checkout.</p>
+        <button class="btn" onclick="openModal()">Proceed to Message</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="plans" class="section">
+    <h2>Popular Plans</h2>
+    <div id="planGrid" class="grid"></div>
+  </section>
+
+  <section id="features" class="section">
+    <h2>Why Choose Us</h2>
+    <div class="grid">
+      <div class="card"><h3>Multiple Networks</h3><p class="muted">Bundles for phones, MiFi and routers.</p></div>
+      <div class="card"><h3>Easy Gifting</h3><p class="muted">Send data to family & friends at checkout.</p></div>
+      <div class="card"><h3>Friendly Support</h3><p class="muted">We’re a chat away on WhatsApp or SMS.</p></div>
+    </div>
+  </section>
+
+  <section id="faq" class="section">
+    <h2>Frequently Asked Questions</h2>
+    <details><summary>Do my bundles expire?</summary><p class="muted">No. Our standard plans are non‑expiring so you use them at your pace.</p></details>
+    <details><summary>How fast is delivery?</summary><p class="muted">Instantly after successful payment confirmation—24/7.</p></details>
+    <details><summary>Can I buy for someone?</summary><p class="muted">Yes. Enter their Ghana number at checkout and we’ll deliver to them.</p></details>
+    <details><summary>What if I don't have WhatsApp?</summary><p class="muted">No problem! At checkout, choose SMS instead of WhatsApp, and we'll reply with payment instructions.</p></details>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>i‑Ben Digital Consult</h3>
+        <p class="muted">Your trusted partner for affordable, non‑expiring data bundles in Ghana.</p>
+        <p class="muted">Phone/WhatsApp: <strong>0555610075</strong><br>Email: <strong>benjaminagyei345@gmail.com</strong></p>
+      </div>
+      <div class="card">
+        <h3>Business Hours</h3>
+        <p class="muted">Mon–Sun • 6:00–22:00 GMT</p>
+        <button class="btn" onclick="openModal()">Buy Data</button>
+      </div>
+      <div class="card">
+        <h3>Payments</h3>
+        <p class="muted">Currently via manual MoMo. Gateway checkout will be enabled after verification.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© <span id="year"></span> <strong>i‑Ben Digital Consult</strong>. All rights reserved.</div>
+      <div class="muted">Built for speed, simplicity and mobile‑first access.</div>
+    </div>
+  </footer>
+
+  <!-- Order Modal -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-label="Order">
+    <div class="modal-card">
+      <h3>Confirm Order</h3>
+      <p class="muted">Review and message us to complete your order.</p>
+      <div class="row">
+        <label>Network
+          <select id="mNetwork">
+            <option>MTN</option>
+            <option>AirtelTigo</option>
+            <option>Telecel</option>
+          </select>
+        </label>
+        <label>Plan
+          <select id="mPlan"></select>
+        </label>
+      </div>
+      <label>Recipient Phone Number
+        <input id="mPhone" inputmode="numeric" maxlength="10" placeholder="0551234567" />
+      </label>
+      <p class="note">No WhatsApp? You can use SMS at checkout.</p>
+      <div style="display:flex;gap:10px;margin-top:10px">
+        <button class="btn" onclick="pay()">Message Now</button>
+        <button class="btn alt" onclick="closeModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Chat buttons -->
+  <a class="sms" id="smsBtn" href="#">SMS Us</a>
+  <a class="wa" id="waBtn" href="#">WhatsApp Us</a>
+
+  <script>
+    const CONFIG = {
+      WHATSAPP_NUMBER: '233555610075',
+      BUSINESS_NAME: 'i‑Ben Digital Consult',
+      CURRENCY: 'GHS'
+    };
+
+    const CATALOG = {
+      MTN: [
+        {label:'1 GB', price: 6},
+        {label:'2 GB', price: 12},
+        {label:'3 GB', price: 17},
+        {label:'4 GB', price: 22},
+        {label:'5 GB', price: 28},
+        {label:'6 GB', price: 33},
+        {label:'7 GB', price: 39},
+        {label:'8 GB', price: 44},
+        {label:'10 GB', price: 50},
+        {label:'15 GB', price: 75},
+        {label:'20 GB', price: 95},
+        {label:'25 GB', price: 110},
+        {label:'30 GB', price: 130},
+        {label:'40 GB', price: 170},
+        {label:'50 GB', price: 210},
+        {label:'100 GB', price: 410}
+      ],
+      AirtelTigo: [
+        {label:'1 GB', price: 5.5},
+        {label:'2 GB', price: 10},
+        {label:'3 GB', price: 15},
+        {label:'4 GB', price: 19},
+        {label:'5 GB', price: 24},
+        {label:'6 GB', price: 28},
+        {label:'7 GB', price: 33},
+        {label:'8 GB', price: 38},
+        {label:'9 GB', price: 40},
+        {label:'10 GB', price: 45},
+        {label:'15 GB', price: 65},
+        {label:'20 GB', price: 85},
+        {label:'30 GB', price: 130},
+        {label:'40 GB', price: 172},
+        {label:'50 GB', price: 210},
+        {label:'100 GB', price: 315}
+      ],
+      Telecel: [
+        {label:'5 GB', price: 27},
+        {label:'10 GB', price: 49},
+        {label:'15 GB', price: 65},
+        {label:'20 GB', price: 90},
+        {label:'30 GB', price: 130},
+        {label:'40 GB', price: 170},
+        {label:'50 GB', price: 200},
+        {label:'100 GB', price: 320}
+      ]
+    };
+
+    const $ = (q)=>document.querySelector(q);
+    $('#year').textContent = new Date().getFullYear();
+
+    function formatMoney(v){ return `GHS ${Number(v).toFixed(2)}`; }
+
+    function populatePlans(selectEl, network){
+      selectEl.innerHTML = '';
+      (CATALOG[network]||[]).forEach(p=>{
+        const opt = document.createElement('option');
+        opt.value = p.label;
+        opt.textContent = `${p.label} — ${formatMoney(p.price)}`;
+        selectEl.appendChild(opt);
+      });
+    }
+
+    function renderPlanCards(){
+      const grid = $('#planGrid');
+      grid.innerHTML = '';
+      Object.keys(CATALOG).forEach(net=>{
+        CATALOG[net].forEach(p=>{
+          const div = document.createElement('div');
+          div.className = 'card';
+          div.innerHTML = `
+            <span class="badge">${net}</span>
+            <div class="price">${p.label}</div>
+            <div class="muted">${formatMoney(p.price)} • Non‑expiring</div>
+            <button class="btn">Buy Now</button>
+          `;
+          div.querySelector('button').addEventListener('click', ()=>{
+            choose(net, p.label);
+          });
+          grid.appendChild(div);
+        });
+      });
+    }
+
+    function choose(network, plan){
+      $('#mNetwork').value = network;
+      populatePlans($('#mPlan'), network);
+      if(plan) $('#mPlan').value = plan;
+      openModal();
+    }
+
+    function openModal(){ $('#modal').classList.add('open'); syncQuickToModal(); }
+    function closeModal(){ $('#modal').classList.remove('open'); }
+
+    function syncQuickToModal(){
+      const qn = $('#qNetwork').value; const qp = $('#qPlan').value; const ph = $('#qPhone').value;
+      $('#mNetwork').value = qn; populatePlans($('#mPlan'), qn); if(qp) $('#mPlan').value = qp; if(ph) $('#mPhone').value = ph;
+    }
+
+    function buildSmsLink(message){
+      const number = (CONFIG.WHATSAPP_NUMBER || '233555610075').replace(/^233/, '+233');
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+      const sep = isIOS ? '&' : '?';
+      return `sms:${number}${sep}body=${encodeURIComponent(message)}`;
+    }
+
+    function pay(){
+      const network = $('#mNetwork').value;
+      const planLabel = $('#mPlan').value;
+      const phone = $('#mPhone').value.trim();
+      if(!/^0\d{9}$/.test(phone)){
+        alert('Please enter a valid 10‑digit Ghana number, e.g., 0551234567.');
+        return;
+      }
+      const item = (CATALOG[network]||[]).find(p=>p.label===planLabel) || {price:0};
+      const text = `Hello, I want to buy ${network} ${planLabel} for ${phone}. Price: ${formatMoney(item.price)}. Please send MoMo payment instructions.`;
+
+      const useWhatsApp = confirm('Open WhatsApp to place order?\n\nTap OK for WhatsApp or Cancel to send via SMS.');
+      if (useWhatsApp) {
+        const wa = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+        window.location.href = wa;
+      } else {
+        const sms = buildSmsLink(text);
+        window.location.href = sms;
+      }
+    }
+
+    // Initial renders & event wires
+    $('#qNetwork').addEventListener('change', ()=>populatePlans($('#qPlan'), $('#qNetwork').value));
+    populatePlans($('#qPlan'), $('#qNetwork').value);
+    renderPlanCards();
+
+    // Floating buttons
+    $('#waBtn').href = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent('Hello, I want to buy a data bundle.')}`;
+    $('#smsBtn').href = buildSmsLink('Hello, I want to buy a data bundle.');
+  </script>
+</body>
+</html>
