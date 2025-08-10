@@ -1,217 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>i‑Ben Digital Consult | Affordable Non‑Expiring Data & Digital Services</title>
-  <meta name="description" content="Instant, affordable, non‑expiring data bundles for MTN, AirtelTigo & Telecel. Order via WhatsApp or SMS. Fast delivery and friendly support from i‑Ben Digital Consult." />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>i-Ben Digital Consult | Affordable Non-Expiring Data & Digital Services</title>
+<meta name="description" content="Instant, affordable, non-expiring data bundles for MTN, AirtelTigo & Telecel. Plus Netflix, Audiomack, MTN Instant Bundles and MTN AFA services. Order via WhatsApp or SMS." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
-  <header>
-    <div class="nav">
-      <div class="logo" aria-label="i‑Ben Digital Consult">
-        <img src="logo-main.jpg" alt="i‑Ben Digital Consult logo" width="36" height="36" class="logo-img"/>
-        <div class="brand">i‑Ben Digital Consult</div>
-      </div>
-      <nav>
-        <a href="#plans">Plans</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#features">Features</a>
-        <a href="#services">Services</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button class="btn" onclick="openModal()">Buy Data</button>
-    </div>
-  </header>
+<header class="nav">
+  <div class="brand">
+    <div class="logo">i‑B</div>
+    <div class="name">i‑Ben Digital Consult</div>
+  </div>
+  <a href="#plans" class="btn buy-link">Buy Data</a>
+</header>
 
-  <section class="hero">
-    <div>
-      <h1>Affordable, reliable & non‑expiring data bundles.</h1>
-      <p>Instant delivery for MTN, AirtelTigo & Telecel. Order via <strong>WhatsApp or SMS</strong>.</p>
-      <div class="hero-cards">
-        <div class="kpi"><h3>All Networks</h3><p>MTN • AirtelTigo • Telecel</p></div>
-        <div class="kpi"><h3>Non‑Expiring Data</h3><p>Use your bundles anytime—no expiry.</p></div>
-        <div class="kpi"><h3>Instant Delivery</h3><p>24/7 after payment confirmation.</p></div>
-      </div>
+<section class="hero">
+  <div class="hero-inner">
+    <h1>Affordable, reliable &amp; non‑expiring data bundles.</h1>
+    <p>Instant delivery for MTN, AirtelTigo &amp; Telecel. Order via <b>WhatsApp</b> or <b>SMS</b>. Simple, fast and friendly service from <b>i‑Ben Digital Consult</b>.</p>
+    <div class="hero-badges">
+      <span class="pill">MTN</span>
+      <span class="pill">AirtelTigo</span>
+      <span class="pill">Telecel</span>
     </div>
-    <div>
-      <div class="kpi banner">
-        <img src="banner-open.jpg" alt="Open for Business - MTN, AirtelTigo, Telecel" class="banner-img"/>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
-  <section id="plans" class="section">
-    <h2>Popular Plans</h2>
-    <div id="planGrid" class="grid"></div>
-  </section>
+<section class="section" id="plans">
+  <h2>Popular Plans</h2>
+  <div id="planGrid" class="grid"></div>
+</section>
 
-  <section id="pricing" class="section">
-    <h2>Full Price List (GHS)</h2>
-    <div class="pricing-grid">
-      <div class="price-card">
-        <h3>MTN</h3>
-        <ul id="price-mtn"></ul>
+<section class="section" id="quick">
+  <h2>Quick Purchase</h2>
+  <div class="card form">
+    <div class="row">
+      <div class="field">
+        <label>Network</label>
+        <select id="qNetwork">
+          <option>MTN</option>
+          <option>AirtelTigo</option>
+          <option>Telecel</option>
+        </select>
       </div>
-      <div class="price-card">
-        <h3>AirtelTigo</h3>
-        <ul id="price-at"></ul>
+      <div class="field">
+        <label>Plan</label>
+        <select id="qPlan"></select>
       </div>
-      <div class="price-card">
-        <h3>Telecel</h3>
-        <ul id="price-tc"></ul>
+      <div class="field">
+        <label>Phone Number</label>
+        <input id="qPhone" type="tel" placeholder="0555610075" />
       </div>
     </div>
-  </section>
-
-  <section id="features" class="section">
-    <h2>Why Choose Us</h2>
-    <div class="grid">
-      <div class="card"><h3>Multiple Networks</h3><p class="muted">Bundles for phones, MiFi and routers.</p></div>
-      <div class="card"><h3>Easy Gifting</h3><p class="muted">Send data to family & friends at checkout.</p></div>
-      <div class="card"><h3>Friendly Support</h3><p class="muted">We’re a chat away on WhatsApp or SMS.</p></div>
+    <div class="row actions">
+      <a id="waQuick" class="btn whats">WhatsApp Us</a>
+      <a id="smsQuick" class="btn sms">SMS Us</a>
+      <a onclick="openModal()" class="btn ghost">Checkout</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="services" class="section">
-    <h2>Digital Services</h2>
-    <div class="grid">
-      <div class="card">
-        <span class="badge">Netflix Premium (Shared)</span>
-        <h3>Watch More, Pay Less</h3>
-        <p class="muted">Secure shared account. HD/Ultra HD. Fast activation.</p>
-        <label>Choose plan
-          <select id="svcNetflix">
-            <option value="1 Month — 45">1 Month — GHS 45</option>
-            <option value="3 Months — 130">3 Months — GHS 130</option>
-            <option value="6 Months — 260">6 Months — GHS 260</option>
-          </select>
-        </label>
-        <div style="display:flex;gap:10px;flex-wrap:wrap">
-          <button class="btn" onclick="orderService('NETFLIX','WA')">WhatsApp Us</button>
-          <button class="btn" onclick="orderService('NETFLIX','SMS')">SMS Us</button>
-        </div>
+<section class="section" id="services">
+  <h2>Digital Services</h2>
+  <div class="grid">
+    <!-- Netflix -->
+    <div class="card">
+      <span class="badge">Netflix</span>
+      <h3>Netflix Premium (Shared)</h3>
+      <p class="muted">Enjoy premium content at a low cost. Fast activation, 100% legit.</p>
+      <div class="field">
+        <label>Plan</label>
+        <select id="svcNetflix">
+          <option value="1 month|45">1 Month — GHS 45</option>
+          <option value="3 months|130">3 Months — GHS 130</option>
+          <option value="6 months|260">6 Months — GHS 260</option>
+        </select>
       </div>
-
-      <div class="card">
-        <span class="badge">MTN Instant Bundles</span>
-        <h3>Valid for 3 days</h3>
-        <p class="muted">No code needed • No airtime required • Instant after payment.</p>
-        <label>Select offer
-          <select id="svcMTN3">
-            <option value="5.27GB + 80 mins — 14">5.27GB + 80 mins — GHS 14</option>
-            <option value="10.54GB + 160 mins — 25">10.54GB + 160 mins — GHS 25</option>
-            <option value="15.81GB + 240 mins — 33">15.81GB + 240 mins — GHS 33</option>
-            <option value="21.08GB + 320 mins — 40">21.08GB + 320 mins — GHS 40</option>
-          </select>
-        </label>
-        <div style="display:flex;gap:10px;flex-wrap:wrap">
-          <button class="btn" onclick="orderService('MTN3','WA')">WhatsApp Us</button>
-          <button class="btn" onclick="orderService('MTN3','SMS')">SMS Us</button>
-        </div>
-      </div>
-
-      <div class="card">
-        <span class="badge">Audiomack Premium (Android)</span>
-        <h3>Unlocked • No Ads • Full Access</h3>
-        <p class="muted">Works on all Android phones • One‑time setup — Yours forever.</p>
-        <label>Choose plan
-          <select id="svcAUDIO">
-            <option value="1 Device Unlock — 30">1 Device Unlock — GHS 30</option>
-            <option value="2 Devices — 50">2 Devices — GHS 50</option>
-            <option value="3+ Devices — Custom">3+ Devices — Chat for discount</option>
-          </select>
-        </label>
-        <div style="display:flex;gap:10px;flex-wrap:wrap">
-          <button class="btn" onclick="orderService('AUDIO','WA')">WhatsApp Us</button>
-          <button class="btn" onclick="orderService('AUDIO','SMS')">SMS Us</button>
-        </div>
+      <div class="row actions">
+        <a class="btn buy-netflix" onclick="orderService('Netflix', 'svcNetflix')">Buy Now</a>
+        <a class="btn whats" onclick="waService('Netflix', 'svcNetflix')">WhatsApp</a>
+        <a class="btn sms" onclick="smsService('Netflix', 'svcNetflix')">SMS</a>
       </div>
     </div>
-  </section>
 
-  <section id="faq" class="section">
-    <h2>Frequently Asked Questions</h2>
-    <details><summary>Do my bundles expire?</summary><p class="muted">No. Our standard plans are non‑expiring.</p></details>
-    <details><summary>How fast is delivery?</summary><p class="muted">Instantly after successful payment confirmation—24/7.</p></details>
-    <details><summary>Can I buy for someone?</summary><p class="muted">Yes. Enter their Ghana number at checkout and we’ll deliver to them.</p></details>
-    <details><summary>What if I don't have WhatsApp?</summary><p class="muted">Choose SMS instead of WhatsApp at checkout.</p></details>
-  </section>
-
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>i‑Ben Digital Consult</h3>
-        <p class="muted">Your trusted partner for affordable, non‑expiring data bundles in Ghana.</p>
-        <p class="muted">Phone/WhatsApp: <strong>0555610075</strong><br>Email: <strong>benjaminagyei345@gmail.com</strong></p>
+    <!-- MTN instant bundles 3 days -->
+    <div class="card">
+      <span class="badge">MTN</span>
+      <h3>MTN Instant Bundles (3 days)</h3>
+      <p class="muted">No activation code required. Instant delivery right after payment.</p>
+      <div class="field">
+        <label>Plan</label>
+        <select id="svcMTN3">
+          <option value="5.27GB + 80 mins|14">5.27GB + 80 mins — GHS 14</option>
+          <option value="10.54GB + 160 mins|25">10.54GB + 160 mins — GHS 25</option>
+          <option value="15.81GB + 240 mins|33">15.81GB + 240 mins — GHS 33</option>
+          <option value="21.08GB + 320 mins|40">21.08GB + 320 mins — GHS 40</option>
+        </select>
       </div>
-      <div class="card">
-        <h3>Business Hours</h3>
-        <p class="muted">Mon–Sun • 6:00–22:00 GMT</p>
-        <button class="btn" onclick="openModal()">Buy Data</button>
-      </div>
-      <div class="card">
-        <h3>Payments</h3>
-        <p class="muted">Manual MoMo now. Paystack/Hubtel later.</p>
+      <div class="row actions">
+        <a class="btn buy-mtn" onclick="orderService('MTN Instant (3 days)', 'svcMTN3')">Buy Now</a>
+        <a class="btn whats" onclick="waService('MTN Instant (3 days)', 'svcMTN3')">WhatsApp</a>
+        <a class="btn sms" onclick="smsService('MTN Instant (3 days)', 'svcMTN3')">SMS</a>
       </div>
     </div>
-  </section>
 
-  <footer>
-    <div class="footer-inner">
-      <div>© <span id="year"></span> <strong>i‑Ben Digital Consult</strong>. All rights reserved.</div>
-      <div class="muted">Built for speed, simplicity and mobile‑first access.</div>
+    <!-- Audiomack -->
+    <div class="card">
+      <span class="badge">Audiomack</span>
+      <h3>Audiomack Premium (Android)</h3>
+      <p class="muted">Unlimited music, no ads, full access. One‑time setup—yours forever.</p>
+      <div class="field">
+        <label>Plan</label>
+        <select id="svcAudio">
+          <option value="1 Device Unlock|30">1 Device — GHS 30</option>
+          <option value="2 Devices Unlock|50">2 Devices — GHS 50</option>
+          <option value="3+ Devices|Chat for Discount">3+ Devices — Chat for discount</option>
+        </select>
+      </div>
+      <div class="row actions">
+        <a class="btn buy-audiomack" onclick="orderService('Audiomack Premium', 'svcAudio')">Buy Now</a>
+        <a class="btn whats" onclick="waService('Audiomack Premium', 'svcAudio')">WhatsApp</a>
+        <a class="btn sms" onclick="smsService('Audiomack Premium', 'svcAudio')">SMS</a>
+      </div>
     </div>
-  </footer>
 
-  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-label="Order">
-    <div class="modal-card">
-      <h3>Place Your Order</h3>
-      <p class="muted">Select network & plan, enter recipient phone, then choose WhatsApp or SMS.</p>
+    <!-- AFA Talktime -->
+    <div class="card">
+      <span class="badge">MTN AFA</span>
+      <h3>MTN AFA Talktime (Non‑expiring)</h3>
+      <p class="muted">Only for registered AFA members. All minutes are non‑expiring.</p>
+      <div class="field">
+        <label>Plan</label>
+        <select id="svcAFA">
+          <option value="280 minutes|9">280 minutes — GHS 9</option>
+          <option value="560 minutes|18">560 minutes — GHS 18</option>
+          <option value="840 minutes|26">840 minutes — GHS 26</option>
+          <option value="1120 minutes|34">1120 minutes — GHS 34</option>
+          <option value="1400 minutes|42">1400 minutes — GHS 42</option>
+          <option value="1680 minutes|49">1680 minutes — GHS 49</option>
+        </select>
+      </div>
+      <div class="row actions">
+        <a class="btn buy-mtn" onclick="orderService('MTN AFA Talktime', 'svcAFA')">Buy Now</a>
+        <a class="btn whats" onclick="waService('MTN AFA Talktime', 'svcAFA')">WhatsApp</a>
+        <a class="btn sms" onclick="smsService('MTN AFA Talktime', 'svcAFA')">SMS</a>
+      </div>
+    </div>
+
+    <!-- AFA Registration -->
+    <div class="card">
+      <span class="badge">MTN AFA</span>
+      <h3>AFA Registration (One‑time)</h3>
+      <p class="muted">Registration fee: <b>GHS 10</b>. Provide your full name and number.</p>
       <div class="row">
-        <label>Network
-          <select id="mNetwork">
-            <option>MTN</option>
-            <option>AirtelTigo</option>
-            <option>Telecel</option>
-          </select>
-        </label>
-        <label>Plan
-          <select id="mPlan"></select>
-        </label>
+        <div class="field">
+          <label>Full name</label>
+          <input id="afaName" placeholder="e.g., Benjamin Agyei" />
+        </div>
+        <div class="field">
+          <label>Number to be registered</label>
+          <input id="afaNumber" placeholder="0555610075" />
+        </div>
       </div>
-      <label>Recipient Phone Number
-        <input id="mPhone" inputmode="numeric" maxlength="10" placeholder="0551234567" />
-      </label>
-
-      <div class="card" style="margin-top:10px">
-        <h3>Manual MoMo Payment</h3>
-        <p class="muted">
-          Send the amount to: <strong id="moName">Benjamin Agyei</strong><br/>
-          Network: <strong id="moNetwork">MTN MoMo</strong><br/>
-          Number: <strong id="moNumber">0555610075</strong>
-        </p>
-        <p class="muted">After payment, message us with the transaction reference.</p>
-      </div>
-
-      <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap">
-        <button class="btn" onclick="sendOrder('WA')">WhatsApp Us</button>
-        <button class="btn" onclick="sendOrder('SMS')">SMS Us</button>
-        <button class="btn alt" onclick="closeModal()">Cancel</button>
+      <div class="row actions">
+        <a class="btn buy-mtn" onclick="orderAFARegister()">Register Now — GHS 10</a>
+        <a class="btn whats" onclick="waAFARegister()">WhatsApp</a>
+        <a class="btn sms" onclick="smsAFARegister()">SMS</a>
       </div>
     </div>
   </div>
+</section>
 
-  <a class="sms" id="smsBtn" href="#">SMS Us</a>
-  <a class="wa" id="waBtn" href="#">WhatsApp Us</a>
+<section class="section">
+  <h2>Contact</h2>
+  <div class="card">
+    <p><b>Phone/WhatsApp:</b> <a href="#" onclick="callNow()">0555610075</a></p>
+    <p><b>Email:</b> benjaminagyei345@gmail.com</p>
+    <p class="muted">Business hours: Mon–Sun • 6:00–22:00 GMT</p>
+  </div>
+</section>
 
-  <script src="app.js"></script>
+<!-- Modal for manual checkout (simple) -->
+<div id="modal" class="modal">
+  <div class="modal-card">
+    <div class="modal-hd">
+      <h3>Manual Checkout</h3>
+      <button class="close" onclick="closeModal()">×</button>
+    </div>
+    <div class="row">
+      <div class="field">
+        <label>Network</label>
+        <select id="mNetwork">
+          <option>MTN</option>
+          <option>AirtelTigo</option>
+          <option>Telecel</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Plan</label>
+        <select id="mPlan"></select>
+      </div>
+      <div class="field">
+        <label>Phone Number</label>
+        <input id="mPhone" type="tel" placeholder="0555610075" />
+      </div>
+    </div>
+    <div class="row actions">
+      <a class="btn whats" onclick="waQuickOrder()">WhatsApp Us</a>
+      <a class="btn sms" onclick="smsQuickOrder()">SMS Us</a>
+    </div>
+    <p class="muted small">We’ll reply with payment instructions (MoMo). After payment, your bundle is delivered instantly.</p>
+  </div>
+</div>
+
+<footer class="foot">
+  <p>© 2025 <b>i‑Ben Digital Consult</b>. Built for speed, simplicity &amp; access.</p>
+</footer>
+
+<script src="app.js?v=4"></script>
 </body>
 </html>
