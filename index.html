@@ -1,132 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>i-Ben Digital Consult — Non-expiring Data Bundles & Services</title>
-  <meta name="description" content="Buy affordable non-expiring data bundles for MTN, AirtelTigo & Telecel. Pay manually via MoMo for now. Also offering Netflix, Audiomack Premium, and MTN AFA. Instant response via WhatsApp or SMS." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>i-Ben Digital Consult</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="nav">
-    <div class="brand">
-      <div class="logo">i‑B</div>
-      <span>i‑Ben Digital Consult</span>
-    </div>
-    <a href="#plans" class="btn buy">Buy Data</a>
+
+  <header>
+    <h1>i-Ben Digital Consult</h1>
   </header>
 
   <main>
-    <section class="hero">
-      <h1>Affordable, reliable & <span class="accent">non‑expiring</span> data bundles.</h1>
-      <p>Instant guidance for MTN, AirtelTigo & Telecel. Order via <strong>WhatsApp or SMS</strong>. Simple, fast and friendly service from <strong>i‑Ben Digital Consult</strong>.</p>
-      <div class="badges">
-        <div class="badge">All Networks — MTN • AirtelTigo • Telecel</div>
-        <div class="badge">Non‑Expiring — Use anytime</div>
-        <div class="badge">Fast Fulfilment — After payment confirmation</div>
-      </div>
-    </section>
-
-    <section id="plans" class="plans">
+    <section id="buy-data">
       <h2>Buy Data</h2>
-
-      <div class="contact-box">
-        <label for="phone">Your Ghana number (for bundle):</label>
-        <input id="phone" type="tel" placeholder="0555610075" />
-        <div class="mini muted">Format: 0XXXXXXXXX (10 digits)</div>
-      </div>
-
-      <div class="grid">
-        <!-- MTN -->
-        <div class="card">
-          <div class="chip chip-mtn">MTN</div>
-          <label class="muted" for="mtnPlan">Choose a plan</label>
-          <select id="mtnPlan" class="select"></select>
-          <div class="price" id="mtnPrice">GHS —</div>
-          <button id="mtnBuy" class="btn brand-mtn">Buy Now</button>
-        </div>
-
-        <!-- AirtelTigo -->
-        <div class="card">
-          <div class="chip chip-at">AirtelTigo</div>
-          <label class="muted" for="atPlan">Choose a plan</label>
-          <select id="atPlan" class="select"></select>
-          <div class="price" id="atPrice">GHS —</div>
-          <button id="atBuy" class="btn brand-at">Buy Now</button>
-        </div>
-
-        <!-- Telecel -->
-        <div class="card">
-          <div class="chip chip-tc">Telecel</div>
-          <label class="muted" for="tcPlan">Choose a plan</label>
-          <select id="tcPlan" class="select"></select>
-          <div class="price" id="tcPrice">GHS —</div>
-          <button id="tcBuy" class="btn brand-tc">Buy Now</button>
-        </div>
-      </div>
-
-      <div class="cta-row">
-        <a id="waBtn" class="btn whats">WhatsApp Us</a>
-        <a id="smsBtn" class="btn sms">SMS Us</a>
-      </div>
-      <div class="mini muted center">Payments are manual MoMo for now. Hubtel/Paystack will be added after verification.</div>
+      <!-- Existing data plans section -->
     </section>
 
-    <section id="services" class="services">
+    <section id="more-services">
       <h2>More Services</h2>
-      <div class="svc-grid">
+      <!-- Existing more services content -->
+    </section>
 
-        <article class="svc">
-          <img src="img_netflix.jpg" alt="Netflix poster" />
-          <h3>Netflix Premium (Shared)</h3>
-          <ul>
-            <li>1 month — <strong>GHS 45</strong></li>
-            <li>3 months — <strong>GHS 130</strong></li>
-            <li>6 months — <strong>GHS 260</strong></li>
-          </ul>
-          <a class="btn netflix">Get Netflix</a>
+    <section class="services extra-services" id="result-checkers">
+      <h2>Result Checker Cards</h2>
+      <div class="cards">
+        <!-- BECE -->
+        <article class="card rc">
+          <div class="card-top">
+            <div class="rc-badge rc-bece">BECE</div>
+            <h3>BECE Result Checker (WAEC)</h3>
+            <p>Instant PIN + Serial delivered to WhatsApp after payment.</p>
+          </div>
+          <div class="rc-fields">
+            <label>Quantity
+              <select id="beceQty">
+                <option value="1">1 card</option>
+                <option value="2">2 cards</option>
+                <option value="5">5 cards</option>
+                <option value="10">10 cards</option>
+              </select>
+            </label>
+            <label>Index Number (optional)
+              <input id="beceIndex" type="text" placeholder="e.g. 0423123456">
+            </label>
+            <label>Exam Year (optional)
+              <input id="beceYear" type="text" placeholder="e.g. 2025">
+            </label>
+          </div>
+          <div class="rc-bottom">
+            <span class="rc-price">GHS <span id="becePrice">—</span></span>
+            <button class="btn btn-at" id="beceBuy">Buy Now</button>
+          </div>
         </article>
 
-        <article class="svc">
-          <img src="img_audiomack.jpg" alt="Audiomack premium" />
-          <h3>Audiomack Premium (Android)</h3>
-          <ul>
-            <li>1 device — <strong>GHS 30</strong></li>
-            <li>2 devices — <strong>GHS 50</strong></li>
-            <li>3+ devices — <strong>DM for offer</strong></li>
-          </ul>
-          <a class="btn audiomack">Get Audiomack</a>
+        <!-- WASSCE -->
+        <article class="card rc">
+          <div class="card-top">
+            <div class="rc-badge rc-wassce">WASSCE</div>
+            <h3>WASSCE Result Checker (WAEC)</h3>
+            <p>Instant PIN + Serial delivered to WhatsApp after payment.</p>
+          </div>
+          <div class="rc-fields">
+            <label>Quantity
+              <select id="wassceQty">
+                <option value="1">1 card</option>
+                <option value="2">2 cards</option>
+                <option value="5">5 cards</option>
+                <option value="10">10 cards</option>
+              </select>
+            </label>
+            <label>Index Number (optional)
+              <input id="wassceIndex" type="text" placeholder="e.g. 1000123456">
+            </label>
+            <label>Exam Year (optional)
+              <input id="wassceYear" type="text" placeholder="e.g. 2025">
+            </label>
+          </div>
+          <div class="rc-bottom">
+            <span class="rc-price">GHS <span id="wasscePrice">—</span></span>
+            <button class="btn btn-netflix" id="wassceBuy">Buy Now</button>
+          </div>
         </article>
-
-        <article class="svc">
-          <img src="img_afa_1.jpg" alt="Join MTN AFA" />
-          <h3>MTN AFA</h3>
-          <p class="muted">Register once (GHS 10) and buy non‑expiring talktime.</p>
-          <ul>
-            <li>280 mins — GHS 9</li>
-            <li>560 mins — GHS 18</li>
-            <li>840 mins — GHS 26</li>
-            <li>1120 mins — GHS 34</li>
-            <li>1400 mins — GHS 42</li>
-            <li>1680 mins — GHS 49</li>
-          </ul>
-          <div class="mini muted">Registration details: <strong>Full name</strong> and <strong>Number to be registered</strong>.</div>
-          <a class="btn brand-mtn">Register for AFA</a>
-        </article>
-
-      </div>
-      <div class="svc-wide">
-        <img src="img_afa_2.jpg" alt="MTN AFA talk more pay less" />
       </div>
     </section>
+
   </main>
 
-  <footer class="footer">
-    <div>© <span id="yr"></span> <strong>i‑Ben Digital Consult</strong>. Built for speed and simplicity.</div>
-    <div>Phone/WhatsApp: <a href="tel:0555610075">0555610075</a> • Email: <a href="mailto:benjaminagyei345@gmail.com">benjaminagyei345@gmail.com</a></div>
+  <footer>
+    <p>WhatsApp: 0555610075</p>
   </footer>
 
   <script src="app.js"></script>
