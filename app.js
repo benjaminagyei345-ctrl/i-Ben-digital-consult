@@ -1,24 +1,171 @@
 // ====== CONFIG: Edit only the prices/labels below ======
 // Use your original bundle prices here (examples included; replace with your real list)
 const DATA_PLANS = {
-  mtn: [
-    { label: "500MB (Daily)", price: 3 },
-    { label: "1GB (Daily)", price: 5 },
-    { label: "2.5GB (Weekly)", price: 15 },
-    { label: "5GB (Monthly)", price: 45 }
-    // TODO: add the rest of your MTN list here
+  "mtn": [
+    {
+      label: "1 GB",
+      price: 6
+    },
+    {
+      label: "2 GB",
+      price: 12
+    },
+    {
+      label: "3 GB",
+      price: 17
+    },
+    {
+      label: "4 GB",
+      price: 22
+    },
+    {
+      label: "5 GB",
+      price: 28
+    },
+    {
+      label: "6 GB",
+      price: 33
+    },
+    {
+      label: "7 GB",
+      price: 39
+    },
+    {
+      label: "8 GB",
+      price: 44
+    },
+    {
+      label: "10 GB",
+      price: 50
+    },
+    {
+      label: "15 GB",
+      price: 75
+    },
+    {
+      label: "20 GB",
+      price: 95
+    },
+    {
+      label: "25 GB",
+      price: 110
+    },
+    {
+      label: "30 GB",
+      price: 130
+    },
+    {
+      label: "40 GB",
+      price: 170
+    },
+    {
+      label: "50 GB",
+      price: 210
+    },
+    {
+      label: "100 GB",
+      price: 410
+    }
   ],
-  at: [
-    { label: "1GB (Daily)", price: 4.5 },
-    { label: "2GB (Weekly)", price: 12 },
-    { label: "5GB (Monthly)", price: 35 }
-    // TODO: add the rest of your AirtelTigo list here
+  "at": [
+    {
+      label: "1 GB",
+      price: 5
+    },
+    {
+      label: "2 GB",
+      price: 10
+    },
+    {
+      label: "3 GB",
+      price: 15
+    },
+    {
+      label: "4 GB",
+      price: 19
+    },
+    {
+      label: "5 GB",
+      price: 24
+    },
+    {
+      label: "6 GB",
+      price: 28
+    },
+    {
+      label: "7 GB",
+      price: 33
+    },
+    {
+      label: "8 GB",
+      price: 38
+    },
+    {
+      label: "9 GB",
+      price: 40
+    },
+    {
+      label: "10 GB",
+      price: 45
+    },
+    {
+      label: "15 GB",
+      price: 65
+    },
+    {
+      label: "20 GB",
+      price: 85
+    },
+    {
+      label: "30 GB",
+      price: 130
+    },
+    {
+      label: "40 GB",
+      price: 172
+    },
+    {
+      label: "50 GB",
+      price: 210
+    },
+    {
+      label: "100 GB",
+      price: 315
+    }
   ],
-  telecel: [
-    { label: "1GB (Daily)", price: 4 },
-    { label: "3GB (Weekly)", price: 14 },
-    { label: "10GB (Monthly)", price: 65 }
-    // TODO: add the rest of your Telecel list here
+  "telecel": [
+    {
+      label: "5 GB",
+      price: 27
+    },
+    {
+      label: "10 GB",
+      price: 49
+    },
+    {
+      label: "15 GB",
+      price: 65
+    },
+    {
+      label: "20 GB",
+      price: 90
+    },
+    {
+      label: "30 GB",
+      price: 130
+    },
+    {
+      label: "40 GB",
+      price: 170
+    },
+    {
+      label: "50 GB",
+      price: 200
+    },
+    {
+      label: "100 GB",
+      price: 320
+    }
   ]
 };
 
